@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { subscribeToTimer } from './api';
+import React, { Component } from 'react'
+import './App.css'
+import { subscribeToTimer } from './api'
+import Input from './Input/Input'
+import Button from './Button/Button'
 
 class App extends Component {
   state = {
@@ -14,14 +15,12 @@ class App extends Component {
     })
   }
 
-  sendMessageHandler = () => {
-    axios.post('', {}).then(res => console.log(res))
-  }
+  sendMessageHandler = () => {}
 
   render () {
     return (
       <div className='App'>
-        <Input change={this.sendMessageHandler} />
+        <Input change={this.getMessageHandler} />
         <Button click={this.sendMessageHandler} />
       </div>
     )
