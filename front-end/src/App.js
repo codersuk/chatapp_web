@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import axios from 'axios'
+import Input from './Input/Input'
+import Button from './Button/Button'
+
+import './App.css'
 
 class App extends Component {
-  render() {
+  state = {
+    message: ''
+  }
+
+  getMessageHandler = e => {
+    this.setState({
+      message: e.target.value
+    })
+  }
+
+  sendMessageHandler = () => {
+    axios.post('', {}).then(res => console.log(res))
+  }
+
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='App'>
+        <Input change={this.sendMessageHandler} />
+        <Button click={this.sendMessageHandler} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
