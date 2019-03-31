@@ -1,19 +1,40 @@
 .sidebar {
     background-color: blue;
-    color: white;
+    color: #cccccc;;
     position: fixed;
     height: 100vh;
-    // padding: 0.5rem 1rem;
+}
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+}
 
-    .sidebar__items {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+.sidebar-title {
+    font-size: 1.5rem;
+}
 
-        .sidebar__item--chanel-list {
-            padding: 0;
-            margin: 0;
-        }
+.sidebar-subtitle {
+    &:hover {
+        color: white;
+    }
+}
+
+.sidebar-item {
+    padding: 1rem 0;
+}
+
+.sidebar-item--channel-list {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.sidebar-item--channel {
+    list-style: none;
+    text-align: left;
+    &:hover {
+        background-color: darkblue;
     }
 }
