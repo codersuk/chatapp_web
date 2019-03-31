@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import './App.css'
-import { subscribeToTimer } from './api'
+import './App.scss'
 import Input from './Input/Input'
 import Button from './Button/Button'
 
