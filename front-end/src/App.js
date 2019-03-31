@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.scss'
-import Input from './Input/Input'
-import Button from './Button/Button'
+import Input from './components/Input/Input'
+import Button from './/components/Button/Button'
 
 class App extends Component {
   state = {
