@@ -1,0 +1,18 @@
+.sidebar {
+    background-color: blue;
+    color: white;
+    position: fixed;
+    height: 100vh;
+    // padding: 0.5rem 1rem;
+
+    .sidebar__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .sidebar__item {
+            
+        }
+    }
+}
