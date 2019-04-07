@@ -1,0 +1,9 @@
+[
+    {
+        "user":222,
+        "message":"text 128max",
+        "message_type":"txt",
+        "channelid":1232,
+        "userid":122
+    }
+]
