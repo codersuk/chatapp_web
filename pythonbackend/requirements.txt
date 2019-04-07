@@ -1,0 +1,4 @@
+Django
+requests
+django-rest-framework
+djangorestframework-jwt
