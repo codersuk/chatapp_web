@@ -1,7 +1,7 @@
 import React from "react";
 import "./sidebarStyles.scss";
 // import Groups from './Groups';
-import Channels from './Channels';
+import Channels from "./Channels";
 // import DirectMessages from './DirectMessages';
 import { Navbar, Col, Row, Nav } from "react-bootstrap";
 import { channelData, messagesData } from "../../mockData";
@@ -17,14 +17,16 @@ const sidebar = () => (
           </Col>
           <Nav.Link href="#">Channels</Nav.Link>
           <Col md={{ offset: 1 }} className="pb-3">
-            <Channels id="2"/>
+            <Channels id="2" />
           </Col>
           <Nav.Link href="#">DirectMessages</Nav.Link>
           <Col md={{ offset: 1 }} className="pb-3">
             {messagesData.map(message => {
               if (message.channelid === 1292) {
                 return (
-                <Nav.Link href="#" className="username">{message.username}</Nav.Link>
+                  <Nav.Link href="#" className="username">
+                    {message.username}
+                  </Nav.Link>
                 );
               }
             })}

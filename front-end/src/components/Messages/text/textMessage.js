@@ -2,7 +2,14 @@ import React, { Component } from "react";
 import { Col,Row } from "react-bootstrap";
 import "./messages.scss";
 
-class Channels extends Component {
+class TextMessage extends Component {
+    constructor(props){
+        super(props);
+
+        const state = {
+        message:''
+        };
+    }
   render() {
     return (
     <div>
@@ -16,4 +23,4 @@ class Channels extends Component {
   }
 }
 
-export default Channels;
+export default TextMessage;
