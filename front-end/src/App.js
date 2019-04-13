@@ -16,10 +16,11 @@ class App extends Component {
     super(props);
     // Define the state variables
     const state = {
-      channelList: [],
-      currentChannel: 0,
       GroupList: [],
       currentGroup: 0,
+      channelList: [],
+      currentChannel: 0,
+      memberList: [],
       messageList: []
     };
     // set the state
@@ -195,7 +196,7 @@ class App extends Component {
 
   // group functions
   // set the current group function
-  setCurrentGroup(GroupID) {
+  setCurrentGroup = GroupID => {
     // TODO: run a check if you have access to this group or not
     fetchChannelList(GroupID);
     this.setState({ currentGroup: GroupID });
@@ -209,6 +210,9 @@ class App extends Component {
           <Sidebar
             setCurrentChannel={this.setCurrentChannel}
             setCurrentGroup={this.setCurrentGroup}
+            // setDirectMessage= ENTER VARIABLE HERE
+            // groupChannels= this.state.channelList
+            // groupMembers= this.state.memberList
           />
         </Col>
         <Col md="9">
