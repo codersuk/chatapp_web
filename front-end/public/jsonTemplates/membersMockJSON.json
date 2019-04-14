@@ -1,0 +1,28 @@
+{   
+    "users": [
+        {
+            "id": 111,
+            "username": "Kaps",
+            "email": "kaps@kaps.com",
+            "groups": [1, 2]
+        },
+        {
+            "id": 222,
+            "username": "Marco",
+            "email": "marco@polo.com",
+            "groups": [1]
+        },
+        {
+            "id": 333,
+            "username": "Silviya",
+            "email": "silviya@silviya.com",
+            "groups": [1]
+        },
+        {
+            "id": 444,
+            "username": "Serge",
+            "email": "serge@serge.com",
+            "groups": [2]
+        }
+    ]
+}
