@@ -41,6 +41,7 @@ class App extends Component {
     this.setCurrentGroup = this.setCurrentGroup.bind(this); //required for the main app.js
   }
 
+
   // Message List
   setMessageList(data) {
     // data is an array of objects
@@ -110,7 +111,7 @@ class App extends Component {
     }
 
     // set the message list with the information we have.
-    this.setMessageList(data);
+    setMessageList(data);
   }
 
   returnMessageList() {
@@ -120,7 +121,7 @@ class App extends Component {
 
   // Channel functions
   setCurrentChannel(ChannelId) {
-    // TODO:
+    // TODO: update the title of the application
     // start pulling the messages for that channel
     fetchMessageList(ChannelId);
     this.setState({ currentChannel: ChannelId });
@@ -209,6 +210,7 @@ class App extends Component {
           <Sidebar
             setCurrentChannel={this.setCurrentChannel}
             setCurrentGroup={this.setCurrentGroup}
+            
           />
         </Col>
         <Col md="9">
