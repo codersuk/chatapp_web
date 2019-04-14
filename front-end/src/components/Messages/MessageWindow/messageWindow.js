@@ -19,7 +19,7 @@ class Messagewindow extends Component {
   render() {
     return (
       <>
-        {this.messageList.map((data) => {
+        {this.state.messageList.map((data) => {
             if(data.type = 'text'){
                 return <TextMessage message={data.message} />;
             }

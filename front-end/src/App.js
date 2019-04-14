@@ -22,6 +22,7 @@ class App extends Component {
     messageList: []
   }
 
+
   // Message List
   setMessageList = (data) => {
     // data is an array of objects
@@ -91,7 +92,7 @@ class App extends Component {
     // }
 
     // set the message list with the information we have.
-    this.setMessageList(data);
+    setMessageList(data);
   }
 
   returnMessageList = () => {
@@ -100,8 +101,10 @@ class App extends Component {
   }
 
   // Channel functions
+
   setCurrentChannel = (ChannelId) => {
     // TODO:
+
     // start pulling the messages for that channel
     this.fetchMessageList(ChannelId);
     this.setState({ currentChannel: ChannelId });
@@ -190,9 +193,11 @@ class App extends Component {
           <Sidebar
             setCurrentChannel={this.setCurrentChannel}
             setCurrentGroup={this.setCurrentGroup}
+
             // setDirectMessage= ENTER VARIABLE HERE
             // groupChannels= this.state.channelList
             // groupMembers= this.state.memberList
+
           />
         </Col>
         <Col md="9">
