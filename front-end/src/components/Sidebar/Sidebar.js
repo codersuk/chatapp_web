@@ -27,7 +27,9 @@ class Sidebar extends Component {
       </div>
     ))
 
-    const users = this.props.users.map(user => <li>{user.username}</li>)
+    const users = this.props.users.map(user => (
+      <li key={user.id}>{user.username}</li>
+    ))
 
     return (
       <div>
