@@ -4,26 +4,25 @@
             "id": 551,
             "name": "general",
             "description": "",
-            "groupid": 1
+            "groupId": 1
         },
         {
             "id": 552,
             "name": "front-end",
             "description": "",
-            "groupid": 1
+            "groupId": 1
         },
         {
             "id": 531,
             "name": "general",
             "description": "",
-            "groupid": 2
+            "groupId": 2
         },
         {
             "id": 532,
             "name": "crazy_channel",
             "description": "",
-            "groupid": 2
+            "groupId": 2
         }
     ]
-    
 }
