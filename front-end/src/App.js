@@ -32,69 +32,69 @@ class App extends Component {
     // run a fetch data
     // TODO: fetch data from the API using the Channel ID
     // delete the switch in the future
-    switch (ChannelId) {
-      case 1:
-        const data = [
-          {
-            userid: 22,
-            username: "username",
-            channelid: 1292,
-            message: "hello world",
-            type: "text",
-            timestamp: 192312031092
-          }
-        ];
-        break;
-      default:
-        const data = [
-          {
-            userid: 22,
-            username: "username",
-            channelid: 1292,
-            message: "hello world",
-            type: "text",
-            timestamp: 192312031092
-          },
-          {
-            userid: 22,
-            username: "username",
-            channelid: 1292,
-            message: "hello world",
-            type: "text",
-            timestamp: 192312031092
-          },
-          {
-            userid: 22,
-            username: "username",
-            channelid: 1292,
-            message: "hello world",
-            type: "text",
-            timestamp: 192312031092
-          },
-          {
-            userid: 22,
-            username: "username",
-            channelid: 1292,
-            message: "hello world",
-            type: "text",
-            timestamp: 192312031092
-          },
-          {
-            userid: 22,
-            username: "username",
-            channelid: 1292,
-            message: "hello world",
-            type: "text",
-            timestamp: 192312031092
-          }
-        ];
-    }
+    // switch (ChannelId) {
+    //   case 1:
+    //     const data = [
+    //       {
+    //         userid: 22,
+    //         username: "username",
+    //         channelid: 1292,
+    //         message: "hello world",
+    //         type: "text",
+    //         timestamp: 192312031092
+    //       }
+    //     ];
+    //     break;
+    //   default:
+    //     const data = [
+    //       {
+    //         userid: 22,
+    //         username: "username",
+    //         channelid: 1292,
+    //         message: "hello world",
+    //         type: "text",
+    //         timestamp: 192312031092
+    //       },
+    //       {
+    //         userid: 22,
+    //         username: "username",
+    //         channelid: 1292,
+    //         message: "hello world",
+    //         type: "text",
+    //         timestamp: 192312031092
+    //       },
+    //       {
+    //         userid: 22,
+    //         username: "username",
+    //         channelid: 1292,
+    //         message: "hello world",
+    //         type: "text",
+    //         timestamp: 192312031092
+    //       },
+    //       {
+    //         userid: 22,
+    //         username: "username",
+    //         channelid: 1292,
+    //         message: "hello world",
+    //         type: "text",
+    //         timestamp: 192312031092
+    //       },
+    //       {
+    //         userid: 22,
+    //         username: "username",
+    //         channelid: 1292,
+    //         message: "hello world",
+    //         type: "text",
+    //         timestamp: 192312031092
+    //       }
+    //     ];
+    // }
 
     // set the message list with the information we have.
     this.setMessageList(data);
   }
 
-  returnMessageList() {
+  returnMessageList = () => {
     //returns the current state list.
     return this.state.messageList;
   }
@@ -116,60 +116,60 @@ class App extends Component {
     // TODO: fetch the channel list for a given group
 
     // delete the switch below
-    switch (GroupID) {
-      case 1:
-      default:
-        const channelList = [
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          },
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          },
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          },
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          },
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          },
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          },
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          },
-          {
-            name: "nameOfGroup",
-            groupid: 1,
-            description: "if any description here",
-            timestamp: 120020200
-          }
-        ];
-    }
+    // switch (GroupID) {
+    //   case 1:
+    //   default:
+    //     const channelList = [
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       },
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       },
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       },
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       },
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       },
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       },
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       },
+    //       {
+    //         name: "nameOfGroup",
+    //         groupid: 1,
+    //         description: "if any description here",
+    //         timestamp: 120020200
+    //       }
+    //     ];
+    // }
 
     this.setState({ channelList: channelList });
   }
