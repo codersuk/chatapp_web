@@ -1,35 +1,36 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-//import Bootstrap
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Bootstrap
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
-//import css
-import "./App.scss";
+// import css
+import './App.scss'
 
-//Import components
-import MessageWindow from "./components/Messages/MessageWindow/messageWindow";
-import Sidebar from "./components/Sidebar/Sidebar";
+// Import components
+// import MessageWindow from './components/Messages/MessageWindow/messageWindow'
+import Sidebar from './components/Sidebar/Sidebar'
+
+// import Axios
+import axios from 'axios'
 
 class App extends Component {
-
   state = {
     GroupList: [],
     currentGroup: 0,
     channelList: [],
     currentChannel: 0,
-    memberList: [],
+    userList: [],
     messageList: []
   }
 
-
   // Message List
-  setMessageList = (data) => {
+  setMessageList = data => {
     // data is an array of objects
-    this.setState({ messageList: data });
+    this.setState({ messageList: data })
   }
 
-  fetchMessageList = (ChannelId) => {
+  fetchMessageList = ChannelId => {
     // run a fetch data
     // TODO: fetch data from the API using the Channel ID
     // delete the switch in the future
@@ -90,34 +91,55 @@ class App extends Component {
     //       }
     //     ];
     // }
-
     // set the message list with the information we have.
-    setMessageList(data);
+    // setMessageList(data);
   }
 
   returnMessageList = () => {
-    //returns the current state list.
-    return this.state.messageList;
+    // returns the current state list.
+    return this.state.messageList
   }
 
   // Channel functions
 
-  setCurrentChannel = (ChannelId) => {
+  setCurrentChannel = ChannelId => {
     // TODO:
 
     // start pulling the messages for that channel
-    this.fetchMessageList(ChannelId);
-    this.setState({ currentChannel: ChannelId });
+    this.fetchMessageList(ChannelId)
+    this.setState({ currentChannel: ChannelId })
   }
 
   // return list of channel of the current group
   returnChannelList = () => {
-    return this.state.channelList;
+    return this.state.channelList
   }
 
-  fetchChannelList = (GroupID) => {
-    // TODO: fetch the channel list for a given group
+  fetchChannelList = GroupID => {
+    axios
+      .get('jsonTemplates/channelsMockJSON.json')
+      .then(response => {
+        return response.data.channels
+      })
+      .then(arrayOfChannels => {
+        this.setState({
+          channelList: arrayOfChannels
+        })
+      })
+  }
+  fetchUserList = GroupID => {
+    axios
+      .get('jsonTemplates/membersMockJSON.json')
+      .then(response => {
+        return response.data.users
+      })
+      .then(arrayOfUsers => {
+        this.setState({
+          userList: arrayOfUsers
+        })
+      })
 
+    // TODO: fetch the channel list for a given group
     // delete the switch below
     // switch (GroupID) {
     //   case 1:
@@ -173,42 +195,47 @@ class App extends Component {
     //       }
     //     ];
     // }
-
-    this.setState({ channelList: channelList });
+    // this.setState({ channelList: channelList })
   }
 
   // group functions
   // set the current group function
   setCurrentGroup = GroupID => {
     // TODO: run a check if you have access to this group or not
-    this.fetchChannelList(GroupID);
-    this.setState({ currentGroup: GroupID });
+    this.fetchChannelList(GroupID)
+    this.setState({ currentGroup: GroupID })
   }
 
-  render() {
+  componentDidMount () {
+    this.fetchChannelList()
+    this.fetchUserList()
+  }
+
+  render () {
     // TODO: change the template CSS
     return (
       <Row>
-        <Col md="3">
+        <Col md='3'>
           <Sidebar
+            users={this.state.userList}
+            channels={this.state.channelList}
             setCurrentChannel={this.setCurrentChannel}
             setCurrentGroup={this.setCurrentGroup}
 
             // setDirectMessage= ENTER VARIABLE HERE
             // groupChannels= this.state.channelList
             // groupMembers= this.state.memberList
-
           />
         </Col>
-        <Col md="9">
-          <MessageWindow
+        <Col md='9'>
+          {/* <MessageWindow
             returnMessageList={this.returnMessageList}
             messageList={this.state.messageList}
-          />
+          /> */}
         </Col>
       </Row>
-    );
+    )
   }
 }
 
-export default App;
+export default App
